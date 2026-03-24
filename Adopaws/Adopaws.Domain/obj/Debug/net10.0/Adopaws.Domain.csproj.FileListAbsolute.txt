@@ -1,0 +1,22 @@
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws.Domain\bin\Debug\net10.0\Adopaws.Domain.deps.json
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws.Domain\bin\Debug\net10.0\Adopaws.Domain.dll
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws.Domain\bin\Debug\net10.0\Adopaws.Domain.pdb
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.AssemblyInfoInputs.cache
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.AssemblyInfo.cs
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.csproj.CoreCompileInputs.cache
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.dll
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\refint\Adopaws.Domain.dll
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.pdb
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\ref\Adopaws.Domain.dll
+C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Domain\bin\Debug\net10.0\Adopaws.Domain.deps.json
+C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Domain\bin\Debug\net10.0\Adopaws.Domain.dll
+C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Domain\bin\Debug\net10.0\Adopaws.Domain.pdb
+C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.AssemblyInfoInputs.cache
+C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.AssemblyInfo.cs
+C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.dll
+C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\refint\Adopaws.Domain.dll
+C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.pdb
+C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\ref\Adopaws.Domain.dll
