@@ -76,11 +76,20 @@ function EditPetModal({ pet, onClose, onSaved }) {
  const set = (key, val) => setForm(p => ({ ...p, [key]: val }))
  const handleChange = e => {
  const { name, value, type, checked } = e.target
+ if (name === 'age') {
+ const num = parseFloat(value)
+ if (value !== '' && (num < 0 || num > 20)) return
+ }
  set(name, type === 'checkbox' ? checked : value)
  }
 
  const handleSubmit = async () => {
  if (!form.name.trim()) { setError('El nombre es requerido.'); return }
+ if (!form.breed.trim()) { setError('La raza es requerida.'); return }
+ if (form.age === '' || form.age === null || form.age === undefined) { setError('La edad es requerida.'); return }
+    if (parseFloat(form.age) < 0 || parseFloat(form.age) > 20) { setError('La edad debe estar entre 0 y 20 años.'); return }
+ if (!form.region) { setError('La provincia es requerida.'); return }
+ if (!form.description.trim()) { setError('La descripción es requerida.'); return }
  setSaving(true); setError('')
  try {
  const petId = pet.idPet ?? pet.id
@@ -135,7 +144,7 @@ function EditPetModal({ pet, onClose, onSaved }) {
  </div>
  <div>
  <label style={labelStyle}>Edad (años)</label>
- <input name="age" type="number" min="0" step="0.5" value={form.age} onChange={handleChange} style={inputStyle} placeholder="Ej: 2" />
+ <input name="age" type="number" min="0" max="20" step="0.5" value={form.age} onChange={handleChange} style={inputStyle} placeholder="Ej: 2" />
  </div>
  <div>
  <label style={labelStyle}>Género</label>

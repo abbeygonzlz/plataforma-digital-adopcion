@@ -42,3 +42,14 @@ C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj
 C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\refint\Adopaws.Domain.dll
 C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.pdb
 C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\ref\Adopaws.Domain.dll
+C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\bin\Debug\net10.0\Adopaws.Domain.deps.json
+C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\bin\Debug\net10.0\Adopaws.Domain.dll
+C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\bin\Debug\net10.0\Adopaws.Domain.pdb
+C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.AssemblyInfoInputs.cache
+C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.AssemblyInfo.cs
+C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.dll
+C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\refint\Adopaws.Domain.dll
+C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.pdb
+C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\ref\Adopaws.Domain.dll

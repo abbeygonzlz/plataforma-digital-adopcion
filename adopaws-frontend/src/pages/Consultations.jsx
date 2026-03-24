@@ -44,8 +44,8 @@ export default function Consultations() {
  consultationService.getBySender(userId).catch(() => ({ data: [] })),
  consultationService.getByReceiver(userId).catch(() => ({ data: [] })),
  ]).then(([s, r]) => {
- setSent(Array.isArray(s.data) ? s.data : [])
- setReceived(Array.isArray(r.data) ? r.data : [])
+ setSent((Array.isArray(s.data) ? s.data : []).filter(c => !c.subject?.startsWith('marketplace:')))
+ setReceived((Array.isArray(r.data) ? r.data : []).filter(c => !c.subject?.startsWith('marketplace:')))
  }).finally(() => setLoading(false))
  } else {
  setLoading(false)
@@ -62,21 +62,39 @@ export default function Consultations() {
  if (!form.receiverIdUser || !form.subject || !form.message) { setError('Completa todos los campos.'); return }
  setSaving(true); setError(''); setSuccess('')
  try {
- await consultationService.create({ senderIdUser: parseInt(user.id), receiverIdUser: parseInt(form.receiverIdUser), subject: form.subject, message: form.message })
+ const senderId = parseInt(user.id)
+ const receiverId = parseInt(form.receiverIdUser)
+ const existing = sent.find(c =>
+ parseInt(c.receiverIdUser) === receiverId &&
+ c.subject?.toLowerCase().trim() === form.subject.toLowerCase().trim()
+ )
+ if (existing) {
+ const cId = existing.idConsultation ?? existing.id
+ await consultationResponseService.create({ idConsultation: parseInt(cId), idUser: senderId, responseMessage: form.message })
+ await consultationService.updateStatus(cId, 'pending')
+ setSuccess('Mensaje agregado a la consulta existente.')
+ setForm(EMPTY_FORM); setShowForm(false)
+ setExpandedId(cId)
+ } else {
+ await consultationService.create({ senderIdUser: senderId, receiverIdUser: receiverId, subject: form.subject, message: form.message })
  setSuccess('¡Consulta enviada!')
  setForm(EMPTY_FORM); setShowForm(false)
- const s = await consultationService.getBySender(parseInt(user.id))
- setSent(Array.isArray(s.data) ? s.data : [])
+ }
+ const s = await consultationService.getBySender(senderId)
+ setSent((Array.isArray(s.data) ? s.data : []).filter(c => !c.subject?.startsWith('marketplace:')))
  } catch (err) {
  setError(err.response?.data?.message || 'Error al enviar.')
  } finally { setSaving(false) }
  }
 
- const loadResponses = async (consultationId) => {
- if (responses[consultationId]) { setExpandedId(expandedId === consultationId ? null : consultationId); return }
+ const loadResponses = async (consultationId, forceReload = false) => {
+ if (responses[consultationId] && !forceReload) { setExpandedId(expandedId === consultationId ? null : consultationId); return }
  try {
  const r = await consultationResponseService.getByConsultation(consultationId)
- setResponses(prev => ({ ...prev, [consultationId]: Array.isArray(r.data) ? r.data : [] }))
+ const all = Array.isArray(r.data) ? r.data : []
+ const consultation = [...sent, ...received].find(c => (c.idConsultation ?? c.id) === consultationId)
+ const filtered = consultation ? all.filter(resp => resp.responseMessage !== consultation.message) : all
+ setResponses(prev => ({ ...prev, [consultationId]: filtered }))
  setExpandedId(consultationId)
  } catch { setExpandedId(consultationId) }
  }
@@ -87,11 +105,14 @@ export default function Consultations() {
  try {
  await consultationResponseService.create({ idConsultation: parseInt(consultationId), idUser: parseInt(user.id ?? user.idUser), responseMessage: msg })
  setReplyText(prev => ({ ...prev, [consultationId]: '' }))
- const r = await consultationResponseService.getByConsultation(consultationId)
- setResponses(prev => ({ ...prev, [consultationId]: Array.isArray(r.data) ? r.data : [] }))
- // Marcar como respondida
  await consultationService.updateStatus(consultationId, 'answered')
- setReceived(prev => prev.map(c => c.idConsultation ?? c.id === consultationId ? { ...c, consultationStatus: 'answered' } : c))
+ setReceived(prev => prev.map(c => (c.idConsultation ?? c.id) === consultationId ? { ...c, consultationStatus: 'answered' } : c))
+ window.dispatchEvent(new Event('refreshBadges'))
+ const r = await consultationResponseService.getByConsultation(consultationId)
+ const all = Array.isArray(r.data) ? r.data : []
+ const consultation = received.find(c => (c.idConsultation ?? c.id) === consultationId)
+ const filtered = consultation ? all.filter(resp => resp.responseMessage !== consultation.message) : all
+ setResponses(prev => ({ ...prev, [consultationId]: filtered }))
  } catch { alert('Error al responder.') }
  }
 

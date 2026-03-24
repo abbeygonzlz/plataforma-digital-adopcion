@@ -10,6 +10,7 @@ public static class UserMapper
         IdUser = user.IdUser,
         FullName = user.FullName,
         Email = user.Email,
+        Password = user.Password,
         Phone = user.Phone,
         Region = user.Region,
         UserType = user.UserType,

@@ -10,14 +10,17 @@ const api = axios.create({
 // ─── Auth (simulado sobre /api/users) ────────────────────
 // El backend no tiene endpoints de auth, se usan los de Users
 export const authService = {
-  // Login: busca por email (backend no expone password en GET /users)
-  login: async ({ email }) => {
+  // Login: busca por email y verifica contraseña contra el campo
+  // que ahora devuelve el backend en UserDto.
+  login: async ({ email, password }) => {
     const res = await api.get("/users");
     const users = Array.isArray(res.data) ? res.data : [];
     const found = users.find(
       (u) => u.email?.toLowerCase() === email.toLowerCase(),
     );
     if (!found) throw new Error("No existe una cuenta con ese correo");
+    if (found.password !== password)
+      throw new Error("Contraseña incorrecta. Intenta de nuevo.");
     return { ...found, id: found.idUser };
   },
 
