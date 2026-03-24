@@ -58,18 +58,8 @@ function BuyChat({ item, currentUser, onClose }) {
  setConsultationId(cId)
  if (consultation.consultationStatus === 'closed') setSaleStatus('sold')
  await buildMessages(cId, consultation.message, consultation.senderIdUser, consultation.createdAt)
- } else if (!isOwner) {
- const res = await consultationService.create({
- senderIdUser: buyerId,
- receiverIdUser: sellerId,
- subject: subject,
- message: `Hola, me interesa tu artículo: "${item.title}". ¿Sigue disponible?`
- })
- const created = res.data
- const cId = created.idConsultation ?? created.id
- setConsultationId(cId)
- await buildMessages(cId, created.message, buyerId, created.createdAt)
  }
+ // Si no existe consulta y no es dueño, se creará al enviar el primer mensaje
  } catch (err) {
  console.error('Error cargando chat:', err)
  } finally {
@@ -80,7 +70,7 @@ function BuyChat({ item, currentUser, onClose }) {
  const buildMessages = async (cId, firstMessage, firstSenderId, firstDate) => {
  const r = await consultationResponseService.getByConsultation(cId).catch(() => ({ data: [] }))
  const responses = Array.isArray(r.data) ? r.data : []
- const allMsgs = [{ id: 'first', text: firstMessage, senderId: parseInt(firstSenderId), createdAt: firstDate }]
+ const allMsgs = firstMessage?.trim() ? [{ id: 'first', text: firstMessage, senderId: parseInt(firstSenderId), createdAt: firstDate }] : []
  responses.forEach(resp => allMsgs.push({
  id: resp.idResponse ?? resp.id,
  text: resp.responseMessage,
@@ -97,17 +87,50 @@ function BuyChat({ item, currentUser, onClose }) {
  }
 
  const sendMessage = async () => {
- if (!text.trim() || !consultationId) return
+ if (!text.trim()) return
  setSending(true)
  try {
+ let cId = consultationId
+
+ // Si el comprador aún no tiene consulta, crearla con el primer mensaje real
+ if (!cId && !isOwner) {
+ const subject = `marketplace:${item.id ?? item.idMarketplaceItem}`
+ const res = await consultationService.create({
+ senderIdUser: parseInt(currentUser.id),
+ receiverIdUser: parseInt(item.idUser),
+ subject: subject,
+ message: text.trim()
+ })
+ const created = res.data
+ cId = created.idConsultation ?? created.id
+ setConsultationId(cId)
+ await consultationService.updateStatus(cId, 'pending').catch(() => {})
+ await buildMessages(cId, created.message, currentUser.id, created.createdAt)
+ setText('')
+ window.dispatchEvent(new Event('refreshBadges'))
+ setSending(false)
+ return
+ }
+
+ if (!cId) return
+
  await consultationResponseService.create({
- idConsultation: parseInt(consultationId),
+ idConsultation: parseInt(cId),
  idUser: parseInt(currentUser.id),
  responseMessage: text.trim()
  })
- if (isOwner) await consultationService.updateStatus(consultationId, 'answered').catch(() => {})
+
+ // Dueño responde → answered (baja el contador del dueño)
+ // Comprador responde → pending (sube el contador del dueño nuevamente)
+ if (isOwner) {
+ await consultationService.updateStatus(cId, 'answered').catch(() => {})
+ } else {
+ await consultationService.updateStatus(cId, 'pending').catch(() => {})
+ }
+
  setText('')
  await refreshMessages()
+ window.dispatchEvent(new Event('refreshBadges'))
  } catch {
  alert('Error al enviar mensaje.')
  } finally { setSending(false) }
@@ -122,6 +145,7 @@ function BuyChat({ item, currentUser, onClose }) {
  await marketplaceService.update(item.id ?? item.idMarketplaceItem, { ...item, publicationStatus: 'sold' })
  if (consultationId) await consultationService.updateStatus(consultationId, 'closed').catch(() => {})
  setSaleStatus('sold')
+ window.dispatchEvent(new Event('refreshBadges'))
  } catch { alert('Error al actualizar estado.') }
  }
 
@@ -136,6 +160,10 @@ function BuyChat({ item, currentUser, onClose }) {
  }
 
  const saveEdit = async () => {
+ if (!editForm.title.trim()) { alert('El título es requerido.'); return }
+ if (!editForm.description.trim()) { alert('La descripción es requerida.'); return }
+ if (!editForm.region) { alert('La provincia es requerida.'); return }
+ if (editForm.price === '' || editForm.price === null || editForm.price === undefined) { alert('El precio es requerido.'); return }
  setSavingEdit(true)
  try {
  await marketplaceService.update(item.id ?? item.idMarketplaceItem, { ...editForm, price: parseFloat(editForm.price) || 0 })
@@ -182,7 +210,7 @@ function BuyChat({ item, currentUser, onClose }) {
  <p style={{ fontWeight: 700, color: 'var(--color-bark)', marginBottom: '0.85rem', fontSize: '0.95rem' }}> Editar publicación</p>
  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.65rem' }}>
  <div style={{ gridColumn: '1/-1' }}><label style={labelStyle}>Título</label><input value={editForm.title} onChange={e => setEditForm(p => ({...p, title: e.target.value}))} style={inputStyle} /></div>
- <div><label style={labelStyle}>Precio (₡)</label><input type="number" value={editForm.price} onChange={e => setEditForm(p => ({...p, price: e.target.value}))} style={inputStyle} /></div>
+ <div><label style={labelStyle}>Precio (₡)</label><input type="number" min="0" value={editForm.price} onChange={e => setEditForm(p => ({...p, price: e.target.value}))} style={inputStyle} /></div>
  <div>
  <label style={labelStyle}>Provincia</label>
  <select value={editForm.region} onChange={e => setEditForm(p => ({...p, region: e.target.value}))} style={inputStyle}>
@@ -368,7 +396,10 @@ export default function Marketplace() {
 
  const handleSubmit = async (e) => {
  e.preventDefault()
- if (!form.title) { setError('El título es requerido.'); return }
+ if (!form.title.trim()) { setError('El título es requerido.'); return }
+ if (!form.description.trim()) { setError('La descripción es requerida.'); return }
+ if (!form.region) { setError('La provincia es requerida.'); return }
+ if (form.price === '' || form.price === null || form.price === undefined) { setError('El precio es requerido.'); return }
  setSaving(true); setError('')
  try {
  await marketplaceService.create({ ...form, price: parseFloat(form.price) || 0, idUser: user.id })
@@ -387,8 +418,9 @@ export default function Marketplace() {
  setDeleting(true)
  try {
  await marketplaceService.delete(confirmDelete.id)
- setItems(prev => prev.filter(i => i.id !== confirmDelete.id))
+ setItems(prev => prev.filter(i => (i.id ?? i.idMarketplaceItem) !== confirmDelete.id))
  setConfirmDelete(null)
+ window.dispatchEvent(new Event('refreshBadges'))
  } catch {
  alert('Error al eliminar.')
  } finally { setDeleting(false) }
@@ -421,7 +453,7 @@ export default function Marketplace() {
  <form onSubmit={handleSubmit}>
  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
  <div><label style={labelStyle}>Título *</label><input name="title" value={form.title} onChange={handleChange} placeholder="Ej: Cama para perro" style={inputStyle} /></div>
- <div><label style={labelStyle}>Precio (₡)</label><input name="price" type="number" value={form.price} onChange={handleChange} placeholder="0" style={inputStyle} /></div>
+ <div><label style={labelStyle}>Precio (₡)</label><input name="price" type="number" min="0" value={form.price} onChange={handleChange} placeholder="0" style={inputStyle} /></div>
  <div>
  <label style={labelStyle}>Provincia</label>
  <select name="region" value={form.region} onChange={handleChange} style={inputStyle}>

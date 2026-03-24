@@ -25,6 +25,10 @@ function PetForm({ initial = EMPTY_PET, onSubmit, onCancel, saving, error, title
  const [form, setForm] = useState(initial)
  const handleChange = (e) => {
  const { name, value, type, checked } = e.target
+ if (name === 'age') {
+ const num = parseFloat(value)
+ if (value !== '' && (num < 0 || num > 20)) return
+ }
  setForm(prev => ({ ...prev, [name]: type === 'checkbox' ? checked : value }))
  }
  return (
@@ -36,11 +40,11 @@ function PetForm({ initial = EMPTY_PET, onSubmit, onCancel, saving, error, title
  {[
  { name: 'name', label: 'Nombre *', type: 'text', placeholder: 'Ej: Luna' },
  { name: 'breed', label: 'Raza', type: 'text', placeholder: 'Ej: Labrador Mix' },
- { name: 'age', label: 'Edad (años)', type: 'number', placeholder: '2' },
+ { name: 'age', label: 'Edad (años)', type: 'number', placeholder: '2', min: '0', max: '20' },
  ].map(f => (
  <div key={f.name}>
  <label style={labelStyle}>{f.label}</label>
- <input name={f.name} type={f.type} value={form[f.name]} onChange={handleChange} placeholder={f.placeholder} style={inputStyle} />
+ <input name={f.name} type={f.type} value={form[f.name]} onChange={handleChange} placeholder={f.placeholder} min={f.min} max={f.max} style={inputStyle} />
  </div>
  ))}
  <div>
@@ -156,7 +160,11 @@ export default function Dashboard() {
  useEffect(() => { if (activeTab === 'requests') loadRequests() }, [activeTab])
 
  const handleCreate = async (form) => {
- if (!form.name || !form.petType) { setError('Nombre y tipo son requeridos.'); return }
+ if (!form.name.trim()) { setError('El nombre es requerido.'); return }
+ if (!form.breed.trim()) { setError('La raza es requerida.'); return }
+ if (form.age === '' || form.age === null || form.age === undefined) { setError('La edad es requerida.'); return }
+ if (!form.region) { setError('La provincia es requerida.'); return }
+ if (!form.description.trim()) { setError('La descripción es requerida.'); return }
  setSaving(true); setError(''); setSuccess('')
  try {
  const { photoUrl, ...petData } = form
@@ -174,7 +182,11 @@ export default function Dashboard() {
  }
 
  const handleEdit = async (form, petId) => {
- if (!form.name) { setError('El nombre es requerido.'); return }
+ if (!form.name.trim()) { setError('El nombre es requerido.'); return }
+ if (!form.breed.trim()) { setError('La raza es requerida.'); return }
+ if (form.age === '' || form.age === null || form.age === undefined) { setError('La edad es requerida.'); return }
+ if (!form.region) { setError('La provincia es requerida.'); return }
+ if (!form.description.trim()) { setError('La descripción es requerida.'); return }
  setSaving(true); setError(''); setSuccess('')
  try {
  const { photoUrl, ...updateData } = form
@@ -193,10 +205,16 @@ export default function Dashboard() {
  const handleDelete = async (petId, petName) => {
  if (!window.confirm(`¿Eliminar a ${petName}? Esta acción no se puede deshacer.`)) return
  try {
+ // Eliminar primero las solicitudes de adopción (restricción FK del backend)
+ try {
+ const reqs = await adoptionService.getByPet(petId)
+ const list = Array.isArray(reqs.data) ? reqs.data : []
+ await Promise.all(list.map(r => adoptionService.delete(r.idAdoptionRequest ?? r.id).catch(() => {})))
+ } catch { /* si falla, igual intentamos eliminar la mascota */ }
  await petService.delete(petId)
  setPets(prev => prev.filter(p => (p.idPet ?? p.id) !== petId))
  setSuccess(`${petName} eliminado.`)
- } catch { alert('Error al eliminar.') }
+ } catch { alert('Error al eliminar. Intenta de nuevo.') }
  }
 
  const handleReqStatus = async (reqId, status) => {

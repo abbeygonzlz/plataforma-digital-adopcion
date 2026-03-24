@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { consultationService, marketplaceService } from "../../services/api";
 import styles from "./Navbar.module.css";
 
 const PawIcon = () => (
@@ -54,12 +55,68 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const [consultationCount, setConsultationCount] = useState(0);
+  const [marketplaceCount, setMarketplaceCount] = useState(0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Cargar contadores de notificaciones
+  useEffect(() => {
+    if (!isAuthenticated || !user) return;
+    const userId = parseInt(user.idUser ?? user.id);
+    if (isNaN(userId)) return;
+
+    const loadCounts = async () => {
+      try {
+        const received = await consultationService.getByReceiver(userId).catch(() => ({ data: [] }));
+        const allReceived = Array.isArray(received.data) ? received.data : [];
+
+        // Consultas veterinarias: recibidas que no están respondidas ni cerradas
+        const vetPending = allReceived.filter(c => {
+          const status = c.consultationStatus?.toLowerCase();
+          return !c.subject?.startsWith('marketplace:') && status !== 'answered' && status !== 'closed';
+        });
+        setConsultationCount(vetPending.length);
+
+        // Mensajes marketplace: solo contar si el usuario tiene items publicados
+        // y el subject coincide con uno de sus items
+        const allItems = await marketplaceService.getAll().catch(() => ({ data: [] }));
+        const myItemIds = new Set(
+          (Array.isArray(allItems.data) ? allItems.data : [])
+            .filter(i => parseInt(i.idUser) === userId)
+            .map(i => i.id ?? i.idMarketplaceItem)
+        );
+
+        if (myItemIds.size > 0) {
+          const mktPending = allReceived.filter(c => {
+            const status = c.consultationStatus?.toLowerCase();
+            if (!c.subject?.startsWith('marketplace:')) return false;
+            // Solo contar 'pending': comprador escribió y el dueño aún no respondió
+            if (status !== 'pending') return false;
+            const itemId = parseInt(c.subject.replace('marketplace:', ''));
+            return myItemIds.has(itemId);
+          });
+          setMarketplaceCount(mktPending.length);
+        } else {
+          setMarketplaceCount(0);
+        }
+      } catch { /* silencioso */ }
+    };
+
+    loadCounts();
+    const interval = setInterval(loadCounts, 30000); // refresca cada 30s
+
+    // Escuchar evento global para refrescar badges inmediatamente
+    window.addEventListener('refreshBadges', loadCounts);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('refreshBadges', loadCounts);
+    };
+  }, [isAuthenticated, user]);
 
   const handleLogout = () => {
     logout();
@@ -72,7 +129,7 @@ export default function Navbar() {
     { to: "/shelters", label: "Refugios" },
     { to: "/how-it-works", label: "Cómo funciona" },
     { to: "/marketplace", label: "Marketplace" },
-    { to: "/consultations", label: "Consultas" },
+    { to: "/consultations", label: "Consultas", badge: consultationCount },
   ];
 
   return (
@@ -87,15 +144,21 @@ export default function Navbar() {
 
         {/* Desktop links */}
         <ul className={styles.links}>
-          {navLinks.map(({ to, label }) => (
+          {navLinks.map(({ to, label, badge }) => (
             <li key={to}>
               <NavLink
                 to={to}
                 className={({ isActive }) =>
                   `${styles.link} ${isActive ? styles.linkActive : ""}`
                 }
+                style={{ position: "relative", display: "inline-flex", alignItems: "center", gap: "4px" }}
               >
                 {label}
+                {badge > 0 && (
+                  <span style={{ background: "#E05A2B", color: "white", borderRadius: "99px", fontSize: "0.65rem", fontWeight: 700, padding: "1px 6px", lineHeight: 1.4, minWidth: "18px", textAlign: "center" }}>
+                    {badge}
+                  </span>
+                )}
               </NavLink>
             </li>
           ))}
@@ -148,8 +211,14 @@ export default function Navbar() {
                     to="/profile?tab=messages"
                     className={styles.dropdownItem}
                     onClick={() => setUserMenuOpen(false)}
+                    style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}
                   >
                     Mensajes Marketplace
+                    {marketplaceCount > 0 && (
+                      <span style={{ background: "#E05A2B", color: "white", borderRadius: "99px", fontSize: "0.65rem", fontWeight: 700, padding: "1px 6px", lineHeight: 1.4, minWidth: "18px", textAlign: "center" }}>
+                        {marketplaceCount}
+                      </span>
+                    )}
                   </Link>
                   {user?.userType === "shelter" && (
                     <Link
@@ -196,7 +265,7 @@ export default function Navbar() {
       {mobileOpen && (
         <div className={styles.mobileMenu}>
           <ul className={styles.mobileLinks}>
-            {navLinks.map(({ to, label }) => (
+            {navLinks.map(({ to, label, badge }) => (
               <li key={to}>
                 <NavLink
                   to={to}

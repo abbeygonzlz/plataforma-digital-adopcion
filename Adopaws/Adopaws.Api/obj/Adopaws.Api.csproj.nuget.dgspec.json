@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Api\\Adopaws.Api.csproj": {}
+    "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Api\\Adopaws.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Api\\Adopaws.Api.csproj": {
+    "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Api\\Adopaws.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Api\\Adopaws.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Api\\Adopaws.Api.csproj",
         "projectName": "Adopaws.Api",
-        "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Api\\Adopaws.Api.csproj",
+        "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Api\\Adopaws.Api.csproj",
         "packagesPath": "C:\\Users\\Albany\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Api\\obj\\",
+        "outputPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj": {
-                "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj"
+              "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj": {
+                "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj"
               },
-              "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj"
+              "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj"
               }
             }
           }
@@ -509,14 +509,14 @@
         }
       }
     },
-    "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj": {
+    "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj",
         "projectName": "Adopaws.Application",
-        "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj",
+        "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj",
         "packagesPath": "C:\\Users\\Albany\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\obj\\",
+        "outputPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -537,8 +537,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj": {
-                "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj"
+              "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj": {
+                "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj"
               }
             }
           }
@@ -866,14 +866,14 @@
         }
       }
     },
-    "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj": {
+    "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj",
         "projectName": "Adopaws.Domain",
-        "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj",
+        "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj",
         "packagesPath": "C:\\Users\\Albany\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1205,14 +1205,14 @@
         }
       }
     },
-    "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj": {
+    "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj",
         "projectName": "Adopaws.Infrastructure",
-        "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Albany\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1233,11 +1233,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj": {
-                "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj"
+              "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj": {
+                "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj"
               },
-              "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj": {
-                "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj"
+              "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj": {
+                "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj"
               }
             }
           }

@@ -54,6 +54,14 @@ export default function Register() {
       setError("La contraseña debe tener al menos 8 caracteres.");
       return;
     }
+    if (/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s.\-]/.test(form.fullName)) {
+      setError("El nombre no puede contener símbolos ni números.");
+      return;
+    }
+    if (form.phone && /[^0-9+\s\-]/.test(form.phone)) {
+      setError("El teléfono solo puede contener números, +, espacios y guiones.");
+      return;
+    }
 
     // Build profileDescription — for vets, embed credentials info
     let profileDescription = form.profileDescription;
@@ -146,7 +154,12 @@ export default function Register() {
                 {isShelter ? "Nombre del refugio / asociación" : isVet ? "Nombre completo" : "Nombre completo"} *
               </label>
               <input id="fullName" type="text" name="fullName" value={form.fullName}
-                onChange={handleChange} className={styles.input} placeholder="Tu nombre" required />
+                onChange={e => {
+                  // Solo letras, espacios, tildes, ñ, guion y punto
+                  const val = e.target.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s.\-]/g, '')
+                  setForm(prev => ({ ...prev, fullName: val }))
+                  setError('')
+                }} className={styles.input} placeholder="Tu nombre" required />
             </div>
 
             {/* Email */}
@@ -161,7 +174,11 @@ export default function Register() {
               <div className={styles.field}>
                 <label className={styles.label}>Teléfono</label>
                 <input type="tel" name="phone" value={form.phone}
-                  onChange={handleChange} className={styles.input} placeholder="+506 xxxx xxxx" />
+                  onChange={e => {
+                    // Solo dígitos, +, espacios y guion
+                    const val = e.target.value.replace(/[^0-9+\s\-]/g, '')
+                    setForm(prev => ({ ...prev, phone: val }))
+                  }} className={styles.input} placeholder="+506 xxxx xxxx" />
               </div>
               <div className={styles.field}>
                 <label className={styles.label}>Provincia</label>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m8tei5lKTE4=",
+  "dgSpecHash": "SVJZ2UtukmE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Api\\Adopaws.Api.csproj",
+  "projectFilePath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Api\\Adopaws.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Albany\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\Albany\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

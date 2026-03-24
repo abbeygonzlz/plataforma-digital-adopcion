@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FUDtzHHxO3s=",
+  "dgSpecHash": "qeHQKFwXY7Q=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj",
+  "projectFilePath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Albany\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.5\\microsoft.extensions.configuration.10.0.5.nupkg.sha512",
     "C:\\Users\\Albany\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.5\\microsoft.extensions.configuration.abstractions.10.0.5.nupkg.sha512",
