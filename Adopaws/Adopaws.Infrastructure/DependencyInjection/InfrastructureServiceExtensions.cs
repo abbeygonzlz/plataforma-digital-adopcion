@@ -34,6 +34,10 @@ public static class InfrastructureServiceExtensions
         services.AddScoped<IConsultationService, ConsultationService>();
         services.AddScoped<IConsultationResponseService, ConsultationResponseService>();
 
+        // AI Compatibility
+        services.AddHttpClient("AnthropicClient");
+        services.AddScoped<ICompatibilityService, CompatibilityService>();
+
         return services;
     }
 }

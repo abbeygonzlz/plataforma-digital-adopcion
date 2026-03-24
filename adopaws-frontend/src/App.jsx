@@ -21,6 +21,7 @@ const HowItWorks = lazy(() => import("./pages/HowItWorks"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Marketplace = lazy(() => import("./pages/Marketplace"));
 const Consultations = lazy(() => import("./pages/Consultations"));
+const UserProfile = lazy(() => import("./pages/UserProfile"));
 
 function PageLoader() {
   return (
@@ -79,6 +80,14 @@ export default function App() {
               element={
                 <Suspense fallback={<PageLoader />}>
                   <Marketplace />
+                </Suspense>
+              }
+            />
+            <Route
+              path="user/:id"
+              element={
+                <Suspense fallback={<PageLoader />}>
+                  <UserProfile />
                 </Suspense>
               }
             />

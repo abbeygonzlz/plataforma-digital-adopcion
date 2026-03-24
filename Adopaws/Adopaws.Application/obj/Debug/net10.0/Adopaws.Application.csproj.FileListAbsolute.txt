@@ -28,3 +28,33 @@ C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\
 C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\refint\Adopaws.Application.dll
 C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.pdb
 C:\Users\Albany\Downloads\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\ref\Adopaws.Application.dll
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Application.deps.json
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Application.dll
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Application.pdb
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Domain.dll
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Domain.pdb
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.csproj.AssemblyReference.cache
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.AssemblyInfoInputs.cache
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.AssemblyInfo.cs
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.csproj.CoreCompileInputs.cache
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws..4CB9F392.Up2Date
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.dll
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\refint\Adopaws.Application.dll
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.pdb
+C:\Universidad Invenio\Ing.software\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\ref\Adopaws.Application.dll
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Application.deps.json
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Application.dll
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Application.pdb
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Domain.dll
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Domain.pdb
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.csproj.AssemblyReference.cache
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.AssemblyInfoInputs.cache
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.AssemblyInfo.cs
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.csproj.CoreCompileInputs.cache
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws..4CB9F392.Up2Date
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.dll
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\refint\Adopaws.Application.dll
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.pdb
+C:\Users\Albany\Downloads\Adopaws (2)\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\ref\Adopaws.Application.dll
