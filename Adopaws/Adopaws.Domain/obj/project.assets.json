@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Albany\\Downloads\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj",
       "projectName": "Adopaws.Domain",
-      "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj",
+      "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj",
       "packagesPath": "C:\\Users\\Albany\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Albany\\Downloads\\Adopaws\\Adopaws\\Adopaws.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Albany\\Downloads\\Adopaws (2)\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
