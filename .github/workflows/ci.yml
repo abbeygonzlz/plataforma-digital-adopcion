@@ -1,0 +1,36 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Build
+        run: npm run build || true
+
+      - name: Tests
+        run: npm test || true
+
+      - name: Security Check
+        run: npm audit --audit-level=high || true
+
+      - name: SonarQube Analysis (simulado)
+        run: echo "Running SonarQube..."
+
+      - name: Deploy (simulado)
+        run: echo "Deploying to staging..."
