@@ -53,3 +53,14 @@ C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\
 C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\refint\Adopaws.Domain.dll
 C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.pdb
 C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\ref\Adopaws.Domain.dll
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\bin\Debug\net10.0\Adopaws.Domain.deps.json
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\bin\Debug\net10.0\Adopaws.Domain.dll
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\bin\Debug\net10.0\Adopaws.Domain.pdb
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.AssemblyInfoInputs.cache
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.AssemblyInfo.cs
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.dll
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\refint\Adopaws.Domain.dll
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\Adopaws.Domain.pdb
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Domain\obj\Debug\net10.0\ref\Adopaws.Domain.dll

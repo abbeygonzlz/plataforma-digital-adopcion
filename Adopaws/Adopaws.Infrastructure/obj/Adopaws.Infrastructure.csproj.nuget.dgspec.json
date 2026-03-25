@@ -1,39 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj": {}
+    "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj": {
+    "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj",
+        "projectUniqueName": "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj",
         "projectName": "Adopaws.Application",
-        "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj",
-        "packagesPath": "C:\\Users\\Albany\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\obj\\",
+        "projectPath": "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj",
+        "packagesPath": "C:\\Users\\sibaj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Albany\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\sibaj\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj": {
-                "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj"
+              "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj": {
+                "projectPath": "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj"
               }
             }
           }
@@ -83,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -361,28 +355,22 @@
         }
       }
     },
-    "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj": {
+    "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj",
         "projectName": "Adopaws.Domain",
-        "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj",
-        "packagesPath": "C:\\Users\\Albany\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\obj\\",
+        "projectPath": "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj",
+        "packagesPath": "C:\\Users\\sibaj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Albany\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\sibaj\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -422,7 +410,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -700,39 +688,33 @@
         }
       }
     },
-    "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj": {
+    "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj",
         "projectName": "Adopaws.Infrastructure",
-        "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Albany\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\Adopaws.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\sibaj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Albany\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\sibaj\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj": {
-                "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj"
+              "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj": {
+                "projectPath": "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Application\\Adopaws.Application.csproj"
               },
-              "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj": {
-                "projectPath": "C:\\Users\\Albany\\Downloads\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj"
+              "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj": {
+                "projectPath": "C:\\Users\\sibaj\\OneDrive\\Desktop\\Adopaws V4\\Adopaws V3\\Adopaws\\Adopaws\\Adopaws\\Adopaws.Domain\\Adopaws.Domain.csproj"
               }
             }
           }
@@ -754,6 +736,10 @@
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[10.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[10.0.4, )"
             },
@@ -784,7 +770,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

@@ -40,4 +40,28 @@ public static class InfrastructureServiceExtensions
 
         return services;
     }
+    public static IServiceCollection AddInfrastructureForTesting(this IServiceCollection services)
+{
+    services.AddDbContext<AdopawsDbContext>(options =>
+        options.UseInMemoryDatabase("TestDb_" + Guid.NewGuid()));
+
+    services.AddScoped<IUserRepository, UserRepository>();
+    services.AddScoped<IPetRepository, PetRepository>();
+    services.AddScoped<IPetPhotoRepository, PetPhotoRepository>();
+    services.AddScoped<IAdoptionRequestRepository, AdoptionRequestRepository>();
+    services.AddScoped<IMarketplaceItemRepository, MarketplaceItemRepository>();
+    services.AddScoped<IConsultationRepository, ConsultationRepository>();
+    services.AddScoped<IConsultationResponseRepository, ConsultationResponseRepository>();
+    services.AddScoped<IUserService, UserService>();
+    services.AddScoped<IPetService, PetService>();
+    services.AddScoped<IPetPhotoService, PetPhotoService>();
+    services.AddScoped<IAdoptionRequestService, AdoptionRequestService>();
+    services.AddScoped<IMarketplaceItemService, MarketplaceItemService>();
+    services.AddScoped<IConsultationService, ConsultationService>();
+    services.AddScoped<IConsultationResponseService, ConsultationResponseService>();
+    services.AddHttpClient("AnthropicClient");
+    services.AddScoped<ICompatibilityService, CompatibilityService>();
+
+    return services;
+}
 }

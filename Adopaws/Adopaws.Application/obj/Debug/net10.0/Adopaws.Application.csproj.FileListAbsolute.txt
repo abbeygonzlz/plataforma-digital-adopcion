@@ -73,3 +73,18 @@ C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application
 C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\refint\Adopaws.Application.dll
 C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.pdb
 C:\Users\Albany\Downloads\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\ref\Adopaws.Application.dll
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Application.deps.json
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Application.dll
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Application.pdb
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Domain.dll
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\bin\Debug\net10.0\Adopaws.Domain.pdb
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.csproj.AssemblyReference.cache
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.AssemblyInfoInputs.cache
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.AssemblyInfo.cs
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.csproj.CoreCompileInputs.cache
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws..4CB9F392.Up2Date
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.dll
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\refint\Adopaws.Application.dll
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\Adopaws.Application.pdb
+C:\Users\sibaj\OneDrive\Desktop\Adopaws V4\Adopaws V3\Adopaws\Adopaws\Adopaws\Adopaws.Application\obj\Debug\net10.0\ref\Adopaws.Application.dll

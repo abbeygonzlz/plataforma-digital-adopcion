@@ -11,9 +11,14 @@ builder.Services.AddControllers();
 builder.Services.AddSwaggerConfiguration();
 builder.Services.AddEndpointsApiExplorer();
 
-// Infrastructure (DbContext + Repositories + Services)
-builder.Services.AddInfrastructure(builder.Configuration);
-
+if (builder.Environment.IsEnvironment("Testing"))
+{
+    builder.Services.AddInfrastructureForTesting();
+}
+else
+{
+    builder.Services.AddInfrastructure(builder.Configuration);
+}
 // CORS — configure as needed
 builder.Services.AddCors(options =>
 {
