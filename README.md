@@ -54,7 +54,7 @@ npm start
 
 ### 4. Acceder
 
-http://localhost:3000
+http://localhost:5173 (Puede variar)
 
 ---
 
